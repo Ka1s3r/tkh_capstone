@@ -128,19 +128,23 @@ with st.container():
         st.write(corr_murders)
     with col2:
         st.write("Heat map explained: ")
+
         st.write(''' Here we can see that the rate at which articles about this topic are published each year has a moderate correlation to murder rate in a given year; while not shown here, the article count had a weak correlation to the murder rate.
                      
-                     The article rate was used, instead of the article count due to the fact that this fluctuates wildly based on resources available to the news agency in any given year, 
-                     including the number of news staff available in any given year.
+                     
 
                      Since crimes rises, and falls throughout the years, there is only a weak correlation between the murder rate, and time.
+                ''')
 
-                     Staff fluctuations: https://www.statista.com/statistics/192894/number-of-employees-at-the-new-york-times-company/
+        st.write('''The article rate was used, instead of the article count due to the fact that this fluctuates wildly based on resources available to the news agency in any given year, 
+                     including the number of news staff available in any given year.''')
+
+        st.write('''Staff fluctuations: https://www.statista.com/statistics/192894/number-of-employees-at-the-new-york-times-company/
 
                      These data were taken from the New York Times API, and can be found here: https://www.kaggle.com/datasets/tumanovalexander/nyt-articles-data
 
-                     Data on the murder rate for each year were taken from the FBI database and can be found here: https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/topic-pages/tables/table-1
-                ''')
+                     Data on the murder rate for each year were taken from the FBI database and can be found here: https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/topic-pages/tables/table-1''')
+
 # cod
 with st.container():
     st.write('---')
