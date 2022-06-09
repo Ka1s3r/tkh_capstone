@@ -92,6 +92,7 @@
 from dateutil.relativedelta import relativedelta
 import datetime as dt
 import altair as alt
+import matplotlib
 from matplotlib import container
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -228,7 +229,7 @@ with container:
     st.header("Interactive Graph")
     st.altair_chart(m_df, use_container_width=True)
 
-    st.header("Compare actual count with crticle count by year")
+    st.header("Compare actual count with article count by year")
 
     instructions = """
     Click and drag line chart to select and pan date interval\n
