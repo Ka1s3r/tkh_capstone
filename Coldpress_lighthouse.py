@@ -106,7 +106,7 @@ m_df = pd.read_csv(path)
 with st.container():
     col1, col2 = st.columns(2)
 with col2:
-    lighthouse_image = 'lighthouse_waves.JPEG'
+    lighthouse_image = 'lighthouse_waves.jpeg'
     st.image(lighthouse_image, width=200)
 
 st.title('ColdPress Lighthouse')
