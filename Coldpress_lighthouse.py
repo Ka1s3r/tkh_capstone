@@ -130,10 +130,7 @@ with st.container():
         st.write("Heat map explained: ")
 
         st.write(''' Here we can see that the rate at which articles about this topic are published each year has a moderate correlation to murder rate in a given year; while not shown here, the article count had a weak correlation to the murder rate.
-                     
-                     
-
-                     Since crimes rises, and falls throughout the years, there is only a weak correlation between the murder rate, and time.
+                     Since crime rises and falls throughout the years, there is only a weak correlation between the murder rate, and time.
                 ''')
 
         st.write('''The article rate was used, instead of the article count due to the fact that this fluctuates wildly based on resources available to the news agency in any given year, 
