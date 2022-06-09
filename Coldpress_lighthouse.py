@@ -89,10 +89,8 @@
 # plt.show()
 
 # creating the app to store the information
-from dateutil.relativedelta import relativedelta
-import datetime as dt
+
 import altair as alt
-import matplotlib
 from matplotlib import container
 import pandas as pd
 import matplotlib.pyplot as plt
