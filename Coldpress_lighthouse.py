@@ -136,8 +136,8 @@ with st.container():
         st.write('''The article rate was used, instead of the article count due to the fact that this fluctuates wildly based on resources available to the news agency in any given year, 
                      including the number of news staff available in any given year.''')
 
-        st.write('''Staff fluctuations: https://www.statista.com/statistics/192894/number-of-employees-at-the-new-york-times-company/
-                     These data were taken from the New York Times API, and can be found here: https://www.kaggle.com/datasets/tumanovalexander/nyt-articles-data
+        st.write('''Staff fluctuations: https://www.statista.com/statistics/192894/number-of-employees-at-the-new-york-times-company/ \n
+                     These data were taken from the New York Times API, and can be found here: https://www.kaggle.com/datasets/tumanovalexander/nyt-articles-data \n
                      Data on the murder rate for each year were taken from the FBI database and can be found here: https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/topic-pages/tables/table-1''')
 
 # cod
