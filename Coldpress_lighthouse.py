@@ -111,7 +111,8 @@ with col2:
 
 st.title('ColdPress Lighthouse')
 st.write('''
-        Coldpress intends to show that the increase or decrease in the frequency of news reports on a particular event type, does not necessarily align with the true frequency of events in real time within that particular category.
+        Coldpress intends to show that the increase or decrease in the frequency of news reports on a particular event type, 
+        does not necessarily align with the true frequency of events in real time within that particular category.
 
         ''')
 
@@ -127,10 +128,12 @@ with st.container():
         st.write(corr_murders)
     with col2:
         st.write("Heat map explained: ")
-        st.write('''
- As murder goes up, so do the number of articles about murder.
- As the years go by, the murder rate decreases.
- As the years go by, however, the article count is only weakly tied to that.
+        st.write(''' Here we can see that the rate at which articles about this topic are published each year has a moderate correlation to murder rate in a given year; while not shown here, the article count had a weak correlation to the murder rate.
+                     The article rate was used, instead of the article count due to the fact that this fluctuates wildly based on resources available to the news agency in any given year, 
+                     including the number of news staff available in any given year: https://www.statista.com/statistics/192894/number-of-employees-at-the-new-york-times-company/
+
+                     These data were taken from the New York Times API, and can be found here: https://www.kaggle.com/datasets/tumanovalexander/nyt-articles-data
+                     Data on the murder rate for each year were taken from the FBI database and can be found here: https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/topic-pages/tables/table-1
         ''')
 # cod
 with st.container():
