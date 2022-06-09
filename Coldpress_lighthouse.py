@@ -222,35 +222,35 @@ with st.container():
     # Create a histogram plot
 
 
-with container:
+# with container:
 
-    st.header("Interactive Graph")
-    st.altair_chart(m_df, use_container_width=True)
+#     st.header("Interactive Graph")
+#     st.altair_chart(m_df, use_container_width=True)
 
-    st.header("Compare actual count with article count by year")
+#     st.header("Compare actual count with article count by year")
 
-    instructions = """
-    Click and drag line chart to select and pan date interval\n
-    Hover over bar chart to view downloads\n
-    Click on a bar to highlight that package
-    """
-    select_packages = st.multiselect(
-        "Select ",
-        year_options,
-        default=[
-            1961,
-            2019,
-        ],
-        help=instructions,
-    )
+#     instructions = """
+#     Click and drag line chart to select and pan date interval\n
+#     Hover over bar chart to view downloads\n
+#     Click on a bar to highlight that package
+#     """
+#     select_packages = st.multiselect(
+#         "Select ",
+#         year_options,
+#         default=[
+#             1961,
+#             2019,
+#         ],
+#         help=instructions,
+#     )
 
-    select_packages_df = pd.DataFrame(m_df).rename(columns={0: "project"})
+#     select_packages_df = pd.DataFrame(m_df).rename(columns={0: "project"})
 
-    if not select_packages:
-        st.stop()
+#     if not select_packages:
+#         st.stop()
 
-    filtered_df = m_df[
-        m_df["year"].isin(m_df["year"])
-    ]
+#     filtered_df = m_df[
+#         m_df["year"].isin(m_df["year"])
+#     ]
 
-    st.altair_chart(m_df(filtered_df), use_container_width=True)
+#     st.altair_chart(m_df(filtered_df), use_container_width=True)
