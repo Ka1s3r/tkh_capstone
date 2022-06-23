@@ -134,7 +134,7 @@ with st.container():
         st.write(fig)
     # values for the select box will return as a tuple.
 
-    sel_box_opt = st.slider("SELECT A YEAR RANGE",value = (1959,2019), min_value = 1959, max_value = 2019, step=10)
+    sel_box_opt = st.slider("SELECT A YEAR RANGE",value = (1959,2019), min_value = 1959, max_value = 2019, step=1)
     plot_filter_data(year_range(sel_box_opt[0], sel_box_opt[1]))
 #[I'm having an  error in line 248, it is not accepting my function]
            
