@@ -51,11 +51,11 @@ with st.container():
 
 1. These data were taken from the New York Times API, and can be found here: 
 
-https://www.kaggle.com/datasets/tumanovalexander/nyt-articles-data
+    https://www.kaggle.com/datasets/tumanovalexander/nyt-articles-data
+
+    Data on the murder rate for each year were taken from the FBI database and can be found here: 
    
-Data on the murder rate for each year were taken from the FBI database and can be found here: 
-   
-https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/topic-pages/tables/table-1
+    https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/topic-pages/tables/table-1
 
 2. These data were retrieved in the form of 60 csvs, one for each year from 1960 to 2019. These csv’s were then turned into a glob-object using the glob library. We iterated through the object, turning each csv into a Pandas DataFrame, concatenating them vertically to create a time series based dataframe in Pandas. 
 
