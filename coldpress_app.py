@@ -116,7 +116,7 @@ with st.container():
     # all the years that are in the dataset
 
 
-    # Filtering the dataset bas on the year the user wants
+    # Filtering the dataset on the year the user wants
     def year_range(strt_year,end_year ):
         flter = m_df.loc[m_df['year'].isin(range(strt_year, end_year))]
         
@@ -124,8 +124,12 @@ with st.container():
 # plots and graph data
     def plot_filter_data(df):
         fig, ax = plt.subplots()
+        ax.set_title( "Murder Rate & Article Rate Over Time") 
+        ax.set_ylabel( "Rates")
+        ax.set_xlabel( "Year")
         sns.lineplot(x= df["year"], y = df["m_art_rt"], ax = ax)
-        sns.lineplot(x = df['year'], y = df["murders"], ax = ax )
+        sns.lineplot(x = df['year'], y = df["murders"], ax = ax)
+        plt.legend(['Murder Rate', "Article Rate"])
         plt.show()
         st.write(fig)
     # values for the select box will return as a tuple.
