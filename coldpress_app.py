@@ -155,7 +155,8 @@ with st.container():
         st.write(fig3)
 
 
-st.write(""" A closer look at the comparison, where the ranges are more comparable shows the afformentioned moderate correlation.""")
+st.write(""" A closer look at the comparison, where the ranges are more comparable shows the afformentioned moderate correlation.
+They are indeed positively correlated, but other factors make up the difference in their relationship.""")
 
 #creating a multiselect search for key works to show count of relating article publish 
 #The future venture of the app
