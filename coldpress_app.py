@@ -139,7 +139,7 @@ with st.container():
     with col1:
         st.header('Murders')
         fig2, ax = plt.subplots()
-        plt.plot(m_df.year, m_df.murders, 'r', label='Murders')
+        plt.plot(m_df.year, m_df.murders, 'b', label='Murders')
         plt.legend()
         plt.show()
         st.write(fig2)
@@ -147,7 +147,7 @@ with st.container():
     with col2:
         st.header('Articles')
         fig3, ax = plt.subplots()
-        plt.plot(m_df.year, m_df.m_art_rt, 'b', label='Articles')
+        plt.plot(m_df.year, m_df.m_art_rt, 'r', label='Articles')
         plt.legend()
         plt.show()
         st.write(fig3)
