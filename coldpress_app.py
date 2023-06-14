@@ -188,52 +188,52 @@ with st.container():
         except KeyError:
             return s.capitalize()
 
-#create a function that allows the user to search topics in the article and returns topic as key and count as value to a dictionary
+# #create a function that allows the user to search topics in the article and returns topic as key and count as value to a dictionary
    
-    def search_bar(df, topics):
-        result_dic = {}
-        topic_count = len(topics)
+#     def search_bar(df, topics):
+#         result_dic = {}
+#         topic_count = len(topics)
 
-        # Creating a list to put the count of each topic in the sample dataset.
-        topic_count_list = []
+#         # Creating a list to put the count of each topic in the sample dataset.
+#         topic_count_list = []
 
-        # This will be modified to use dictionaries in the future. 
-        # For now, a list will do, but this will be replaced.
-        for topic in topics:
-            result = df['sentence'].str.contains(topic)
-            result = list(result.value_counts())[1]
-            topic_count_list.append(result)
-            result_dic[topic] = result
+#         # This will be modified to use dictionaries in the future. 
+#         # For now, a list will do, but this will be replaced.
+#         for topic in topics:
+#             result = df['sentence'].str.contains(topic)
+#             result = list(result.value_counts())[1]
+#             topic_count_list.append(result)
+#             result_dic[topic] = result
     
-        return topic_count_list
+#         return topic_count_list
 
-    list_of_topics = ['man', 'woman', 'pandemic','bee', 'civil war', 'capitalism', 'war', "homeless", 'safety', 'shooting', 'hate crime']
+#     list_of_topics = ['man', 'woman', 'pandemic','bee', 'civil war', 'capitalism', 'war', "homeless", 'safety', 'shooting', 'hate crime']
 
-    count_list = search_bar(df, list_of_topics)
-    topic_series = pd.Series(list_of_topics)
-    count_series = pd.Series(count_list)
-    topic_df = pd.concat([topic_series,count_series],axis=1)
-    topic_df.columns = ['topic','count']
+#     count_list = search_bar(df, list_of_topics)
+#     topic_series = pd.Series(list_of_topics)
+#     count_series = pd.Series(count_list)
+#     topic_df = pd.concat([topic_series,count_series],axis=1)
+#     topic_df.columns = ['topic','count']
 
-    bar_fig = plt.figure(figsize=(15,6))
-    sns.set_theme(style='whitegrid')
-    sns.barplot(x="topic", y="count", data=topic_df)
+#     bar_fig = plt.figure(figsize=(15,6))
+#     sns.set_theme(style='whitegrid')
+#     sns.barplot(x="topic", y="count", data=topic_df)
 
-    multi_sel_topics = st.multiselect(
-        "Count Result per Topic", options= list_of_topics, default = list_of_topics[0:3], format_func=pretty
-    )
+#     multi_sel_topics = st.multiselect(
+#         "Count Result per Topic", options= list_of_topics, default = list_of_topics[0:3], format_func=pretty
+#     )
     
-    st.write(bar_fig)
+#     st.write(bar_fig)
 
-    # PROBLEM DIRECTLY BELOW
-    # plot_df =  #pd.DataFrame.from_dict()
+#     # PROBLEM DIRECTLY BELOW
+#     # plot_df =  #pd.DataFrame.from_dict()
 
-#     chart = (alt.Chart(topic_df,title="Frequency News Article Published ",).mark_bar().encode(x=alt.X("topic_count:Q", title="Frequency of Topic"),
-#         y=alt.Y("topics:N",sort=alt.EncodingSortField(field="Topic", order="descending"),title="Topics"),
-#         color=alt.Color("topics:N",legend=alt.Legend(title="Topics"),scale=alt.Scale(scheme="category10"),),
-#         tooltip=["name:N", "count:O"],))
+# #     chart = (alt.Chart(topic_df,title="Frequency News Article Published ",).mark_bar().encode(x=alt.X("topic_count:Q", title="Frequency of Topic"),
+# #         y=alt.Y("topics:N",sort=alt.EncodingSortField(field="Topic", order="descending"),title="Topics"),
+# #         color=alt.Color("topics:N",legend=alt.Legend(title="Topics"),scale=alt.Scale(scheme="category10"),),
+# #         tooltip=["name:N", "count:O"],))
 
-# st.altair_chart(chart, use_container_width=True)
+# # st.altair_chart(chart, use_container_width=True)
 
 
 
