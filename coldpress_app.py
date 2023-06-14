@@ -18,9 +18,9 @@ m_df = pd.read_csv(path)
 # Creating the App: Title & Header
 with st.container():
     col1, col2 = st.columns(2)
-# with col2:
-#     lighthouse_image = 'lighthouse_waves.JPEG'
-#     st.image(lighthouse_image, width=200)
+with col2:
+    lighthouse_image = 'lighthouse_waves.JPEG'
+    st.image(lighthouse_image, width=200)
 
 st.title('Career Team 2: ColdPress')
 
@@ -115,10 +115,10 @@ with st.container():
     # Creating a drop down menu
 
     # Filtering the dataset on the year the user wants
-    # def year_range(strt_year,end_year ):
-    #     flter = m_df.loc[m_df['year'].isin(range(strt_year, end_year))]
+    def year_range(strt_year,end_year ):
+        flter = m_df.loc[m_df['year'].isin(range(strt_year, end_year))]
         
-    #     return flter
+    #     return filter
 # plots and graph data
     def plot_filter_data(df):
         fig, ax = plt.subplots()
@@ -132,8 +132,8 @@ with st.container():
         st.write(fig)
     # values for the select box will return as a tuple.
 
-    #sel_box_opt = st.slider("SELECT A YEAR RANGE",value = (1959,2019), min_value = 1959, max_value = 2019, step=1)
-    # plot_filter_data(year_range(sel_box_opt[0], sel_box_opt[1]))
+    sel_box_opt = st.slider("SELECT A YEAR RANGE",value = (1959,2019), min_value = 1959, max_value = 2019, step=1)
+    plot_filter_data(year_range(sel_box_opt[0], sel_box_opt[1]))
            
 
 with st.container():
