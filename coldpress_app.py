@@ -117,10 +117,10 @@ with st.container():
 
 
     # Filtering the dataset on the year the user wants
-    def year_range(strt_year,end_year ):
-        flter = m_df.loc[m_df['year'].isin(range(strt_year, end_year))]
+    # def year_range(strt_year,end_year ):
+    #     flter = m_df.loc[m_df['year'].isin(range(strt_year, end_year))]
         
-        return flter
+    #     return flter
 # plots and graph data
     def plot_filter_data(df):
         fig, ax = plt.subplots()
