@@ -113,8 +113,6 @@ with st.container():
     col1, col2, col3 = st.columns(3)
     st.write('---')
     # Creating a drop down menu
-    # all the years that are in the dataset
-
 
     # Filtering the dataset on the year the user wants
     # def year_range(strt_year,end_year ):
