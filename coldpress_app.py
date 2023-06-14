@@ -1,9 +1,4 @@
 
-from operator import index
-from dateutil.relativedelta import relativedelta
-import datetime as dt
-import altair as alt
-from matplotlib import container
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
@@ -18,9 +13,9 @@ m_df = pd.read_csv(path)
 # Creating the App: Title & Header
 with st.container():
     col1, col2 = st.columns(2)
-with col2:
-    lighthouse_image = 'lighthouse_waves.JPEG'
-    st.image(lighthouse_image, width=200)
+# with col2:
+#     lighthouse_image = 'lighthouse_waves.JPEG'
+#     st.image(lighthouse_image, width=200)
 
 st.title('Career Team 2: ColdPress')
 
@@ -113,12 +108,14 @@ with st.container():
     col1, col2, col3 = st.columns(3)
     st.write('---')
     # Creating a drop down menu
+    # all the years that are in the dataset
+
 
     # Filtering the dataset on the year the user wants
     def year_range(strt_year,end_year ):
         flter = m_df.loc[m_df['year'].isin(range(strt_year, end_year))]
         
-    #     return filter
+        return flter
 # plots and graph data
     def plot_filter_data(df):
         fig, ax = plt.subplots()
@@ -222,15 +219,15 @@ ColdPress will hopefully help in understanding our news, our world, and each oth
     
 #     st.write(bar_fig)
 
-#     # PROBLEM DIRECTLY BELOW
-#     # plot_df =  #pd.DataFrame.from_dict()
+    # PROBLEM DIRECTLY BELOW
+    # plot_df =  #pd.DataFrame.from_dict()
 
-# #     chart = (alt.Chart(topic_df,title="Frequency News Article Published ",).mark_bar().encode(x=alt.X("topic_count:Q", title="Frequency of Topic"),
-# #         y=alt.Y("topics:N",sort=alt.EncodingSortField(field="Topic", order="descending"),title="Topics"),
-# #         color=alt.Color("topics:N",legend=alt.Legend(title="Topics"),scale=alt.Scale(scheme="category10"),),
-# #         tooltip=["name:N", "count:O"],))
+#     chart = (alt.Chart(topic_df,title="Frequency News Article Published ",).mark_bar().encode(x=alt.X("topic_count:Q", title="Frequency of Topic"),
+#         y=alt.Y("topics:N",sort=alt.EncodingSortField(field="Topic", order="descending"),title="Topics"),
+#         color=alt.Color("topics:N",legend=alt.Legend(title="Topics"),scale=alt.Scale(scheme="category10"),),
+#         tooltip=["name:N", "count:O"],))
 
-# # st.altair_chart(chart, use_container_width=True)
+# st.altair_chart(chart, use_container_width=True)
 
 
 
