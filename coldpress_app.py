@@ -134,9 +134,8 @@ with st.container():
         st.write(fig)
     # values for the select box will return as a tuple.
 
-    sel_box_opt = st.slider("SELECT A YEAR RANGE",value = (1959,2019), min_value = 1959, max_value = 2019, step=1)
-    plot_filter_data(year_range(sel_box_opt[0], sel_box_opt[1]))
-#[I'm having an  error in line 248, it is not accepting my function]
+    #sel_box_opt = st.slider("SELECT A YEAR RANGE",value = (1959,2019), min_value = 1959, max_value = 2019, step=1)
+    # plot_filter_data(year_range(sel_box_opt[0], sel_box_opt[1]))
            
 
 with st.container():
@@ -177,16 +176,16 @@ ColdPress should allow for readers to see the grand scale of the issues they’r
 ColdPress will hopefully help in understanding our news, our world, and each other a little better. 
 """)
 
-with st.container():
-    path_2 = 'sample_df_7300.csv'
-    df = pd.read_csv(path_2)
+# with st.container():
+#     path_2 = 'sample_df_7300.csv'
+#     df = pd.read_csv(path_2)
     
-    # ignore
-    def pretty(s: str) -> str:
-        try:
-            return dict(js="JavaScript")[s]
-        except KeyError:
-            return s.capitalize()
+#     # ignore
+#     def pretty(s: str) -> str:
+#         try:
+#             return dict(js="JavaScript")[s]
+#         except KeyError:
+#             return s.capitalize()
 
 # #create a function that allows the user to search topics in the article and returns topic as key and count as value to a dictionary
    
